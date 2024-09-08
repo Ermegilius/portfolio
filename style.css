@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    background-image: url("./imgs/header.JPG");
+    background-size: cover;
+    opacity: 0.9;
+    padding: 1rem;
+    font-size: 2.5rem;
+    flex-direction:column;
+    color: #FFFFFF;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 2.5px solid #FFFFFF;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+li a:hover {
+  background-color: #c8e4f9d5;
+}
+
+#banner h1 {
+    text-align: center;
+    padding: 15rem 0 2rem 0;
+}
+main {
+    display: flex;
+    font-size: 1.5rem;
+    margin: 1vh;
+    flex-direction:column;
+}
+
+.block h2{
+    margin-top: 1rem;
+}
+
+.unit {
+    display: flex;
+    margin: 1.5rem 0;
+    flex-direction: row;
+    justify-content:space-between; 
+}
+
+.unit:nth-child(2n+1) {
+    flex-direction: row-reverse;
+}
+
+.imgBox {
+    width: 20vw;
+}
+
+.textBox {
+    width: 77vw;
+}
+
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#projects, #skills  {
+    background: #c8f9cdd5;
+    background: linear-gradient(180deg, #FFFFFF 0%, #c8f9cdd5 50%, #FFFFFF 100%);
+
+}
+
+#aboutMe {
+    background: #c8e4f9d5;
+    background: linear-gradient(180deg, #FFFFFF 0%, #c8e4f9d5 50%, #FFFFFF 100%);
+
+}
+
+.formBox {
+    background-color: #c8e4f9d5;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: .3rem;
+    margin: .3rem 0 .1rem 0;
+}
+
+input {
+    width: 45%;
+    padding: .5rem;
+    font-size: 1rem;
+    border: 1px solid #000;
+    border-radius: .5rem;
+}
+
+#message {
+    width: 100%;
+    height: 5rem;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: .5rem;
+    background-color: coral;
+    border-radius: .5rem;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    width: 30%;
+    font-size: 1.5rem;
+}
+
+footer {
+    display: flex;
+    height: 9rem;  
+    background-image: url("./imgs/footer.JPG");
+    background-size: cover;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100%;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-align: left;
+    font-family: sans-serif;
+  }
