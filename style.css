@@ -8,11 +8,11 @@
     --accent-light-color: #e50d0d;
     --accent-dark-color: #fb3434;
 
-    --outline--light: 3px solid var(--secondery-light-color);
-    --outline--dark: 3px solid var(--secondery-dark-color);
+    --outline--light: 2px solid var(--secondery-light-color);
+    --outline--dark: 2px solid var(--secondery-dark-color);
 
-    --border--light: 2.5px solid var(--primary-light-color);
-    --border--dark: 2.5px solid var(--primary--dark-color);
+    --border--light: 2px solid var(--secondery-light-color);
+    --border--dark: 2px solid var(--secondery-dark-color);
 }
 
 * {
@@ -84,14 +84,14 @@ header ul {
     list-style: none;
     flex-wrap: nowrap;
     justify-content: space-around;
-    
 }
 
 li a {
     text-decoration: none;
-    color: var(--primary--dark-color);
-    border: var(--border--dark);
-    border-radius: 10px;
+    color: #ffffff;
+    border: var(--border--light);
+    border-width: 4px;
+    border-radius: .5rem;
     text-align: center;
     font-size: 2rem;
     padding: .5rem;
@@ -110,14 +110,44 @@ main {
 }
 
 .block {
+    display: flex;
+    flex-direction: column;
     padding: .5rem;
+    box-shadow: 0 0 10px #a2a2a2;
+    margin-bottom: .5rem;
+}
+
+.cardBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.card {
+    flex: 1;
+    margin: 0 1rem;
+    padding: .5rem;
+    border: var(--border--light);
+    border-radius: .5rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--secondery-light-color);
+}
+
+.card a:hover {
+    color: var(--accent-light-color);
 }
 
 .unit {
     display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
-    justify-content:space-between;
 }
 
 .unit .textBox {
@@ -134,12 +164,12 @@ margin-left: .5rem;
 }
 
 .imgBox {
-    width: 20vw;
+    flex: 1;
     border-radius: 10%;
 }
 
 .textBox {
-    width: 77vw;
+    flex: 3;
 }
 
 
@@ -175,18 +205,28 @@ form {
 
 label {
     text-align: left;
-    font-size: 1rem;
-    color: grey;
-    margin-bottom: .3rem;
-    margin: .3rem 0 .1rem 0;
+    font-weight: 200;
+    margin: .3rem 0;
 }
 
 input {
     width: 45%;
     padding: .5rem;
+    margin-top: .3rem;
     font-size: 1rem;
-    border: 1px solid #000;
+    border: var(--border--light);
     border-radius: .5rem;
+}
+
+input:active, input:focus {
+    outline: var(--outline--light);
+    background-color: #ffffff;
+}
+
+input::placeholder {
+    font-weight: 100;
+    opacity: 0.5;
+    color: var(--primary-light-color);
 }
 
 #message {
@@ -194,18 +234,23 @@ input {
     height: 5rem;
 }
 
-button {
+.cta {
     display: block;
     margin: auto;
     padding: .5rem;
-    background-color: coral;
+    background-color: var(--accent-light-color);
     border-radius: .5rem;
-    color: #FFFFFF;
+    color: var(--primary--dark-color);
     border: none;
     margin-top: 1.5rem;
     text-transform: uppercase;
-    width: 30%;
+    width: 25%;
     font-size: 1.5rem;
+}
+
+.cta:hover {
+    outline: var(--outline--light);
+    opacity: .9;
 }
 
 footer {
@@ -224,7 +269,7 @@ footer {
 }
 
 footer p {
-    margin-right: 3rem .5rem;
+    margin: .5rem;
     font-weight: 100;
     font-size: .7rem;
     text-align: right;
