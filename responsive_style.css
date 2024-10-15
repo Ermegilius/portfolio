@@ -167,6 +167,14 @@ box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     margin: .5rem 0;
 }
 
+.skillBox {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    margin: .5rem 0;
+}
+
 #projects, #skills  {
     background: #c8f9cdd5;
     background: linear-gradient(180deg, #FFFFFF 0%, #c8f9cdd5 50%, #FFFFFF 100%);
