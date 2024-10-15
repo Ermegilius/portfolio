@@ -175,6 +175,16 @@ box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     margin: .5rem 0;
 }
 
+.skillBox span {
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+progress {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    width: 50vw;
+}
+
 #projects, #skills  {
     background: #c8f9cdd5;
     background: linear-gradient(180deg, #FFFFFF 0%, #c8f9cdd5 50%, #FFFFFF 100%);
@@ -336,6 +346,15 @@ footer span {
     .card p {
         margin: .5rem 0;
     }
+
+    .skillBox span {
+        font-weight: 400;
+        font-size: 3rem;
+    }
+
+    progress {
+        width: 70vw;
+    }
 }
 
 /* Big screen style */
@@ -411,17 +430,21 @@ footer span {
     }
 
     .unit img {
-        flex: 1;
+        flex: 2;
         width: 25%;
         object-fit: cover;
         margin: 0;
     }
+
+    .unit div {
+        flex: 1;
+    }
     
     .unit p {
-        flex: 3;
+        flex: 5;
         margin-left: .5rem;
     }
-        
+
     .unit:nth-child(2n+1) {
         flex-direction: row-reverse;
     }
@@ -429,6 +452,22 @@ footer span {
     .unit:nth-child(2n+1) p {
         margin-left: 0;
         margin-right: .5rem;
+    }
+
+    .skillBox {
+        align-self: flex-start;
+       
+        margin: 0 .5rem;
+    }
+
+    .skillBox span {
+        font-weight: 800;
+        font-size: 2rem;
+    }
+
+    progress {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+        width: 100%;
     }
 
     input {
