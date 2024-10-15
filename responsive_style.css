@@ -19,26 +19,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 12px;
     color: var(--primary-light-color);
     font-family: "Inter", sans-serif;
 }
 
 h1 {
-    font-size: 32px;
-    margin-top: .1rem;
+    font-size: 1.6rem;
+    margin-top: .2rem;
     margin-bottom: .1rem;
 }
 
 h2 {
-    font-size: 24px;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    margin-top: .2rem;
+    margin-bottom: .1rem;
 }
 
 h3 {
-    font-size: 19px;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
+    font-size: 1.1rem;
+    margin-top: .3rem;
+    margin-bottom: .1rem;
+    text-align: center;
 }
 
 body {
@@ -52,12 +54,13 @@ body {
     margin: .5rem;
 }
 
-p {
-    font-size: 16px;
-}
-
 img {
     outline: var(--outline--light);
+    border-radius: .5rem;
+    width: 75%;
+    object-fit: cover;
+    margin: 0;
+    align-self: center;
 }
 
 header {
@@ -69,21 +72,22 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.9;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 header nav {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 1rem;
+    flex-direction: column;
+    height: 100%;
+    margin: .1rem;
 }
 
 header ul {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
     list-style: none;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -93,11 +97,10 @@ li a {
     text-decoration: none;
     color: #ffffff;
     border: var(--border--light);
-    border-width: 4px;
+    border-width: .1rem;
     border-radius: .5rem;
     text-align: center;
-    font-size: 2rem;
-    padding: .5rem;
+    padding: .1rem;
     opacity: .9;
 }
 
@@ -114,14 +117,14 @@ main {
 .block {
     display: flex;
     flex-direction: column;
-    padding: .5rem;
+    padding: .2rem;
     box-shadow: 0 0 10px #a2a2a2;
-    margin-bottom: .5rem;
+    margin-bottom: .2rem;
 }
 
 .cardBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
 }
 
@@ -129,9 +132,7 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 0 1rem;
-    padding: .5rem;
-
+    margin: .5rem 0;
     border-radius: .5rem;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -143,8 +144,7 @@ box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card p {
-    margin-bottom: 1rem;
-
+    margin: .2rem 0;
 }
 
 .card a {
@@ -159,37 +159,12 @@ box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 
 .unit {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    margin-bottom: .5rem;
 }
 
-.unit .textBox {
-margin-left: .5rem;
-}
-
-.unit:nth-child(2n+1) {
-    flex-direction: row-reverse;
-}
-
-.unit:nth-child(2n+1) .textBox{
-    margin-left: 0;
-    margin-right: .5rem;
-}
-
-.imgBox {
-    flex: 1;
-    border-radius: 10%;
-}
-
-.textBox {
-    flex: 3;
-}
-
-
-img {
-    border-radius: .5rem;
-    width: 100%;
-    object-fit: cover;
+.unit img {
+    margin: .5rem 0;
 }
 
 #projects, #skills  {
@@ -222,8 +197,8 @@ label {
     margin: .3rem 0;
 }
 
-input {
-    width: 45%;
+input, textarea {
+    width: 60%;
     padding: .5rem;
     margin-top: .3rem;
     font-size: 1rem;
@@ -231,12 +206,12 @@ input {
     border-radius: .5rem;
 }
 
-input:active, input:focus {
+input:active, input:focus, textarea:active, textarea:focus {
     outline: var(--outline--light);
     background-color: #ffffff;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
     font-weight: 100;
     opacity: 0.5;
     color: var(--primary-light-color);
@@ -258,7 +233,7 @@ input::placeholder {
     margin-top: 1.5rem;
     text-transform: uppercase;
     width: 25%;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .cta:hover {
@@ -289,5 +264,174 @@ footer p {
 }
 
 footer span {
-    font-size: .6rem;
+    font-size: .5rem;
+}
+
+/* Tablet style */
+@media only screen and (min-width: 768px) {
+    *{
+        font-size: 16px;
+    }
+
+    h1 {
+        margin-top: .5rem;
+        margin-bottom: .2rem;
+    }
+    
+    h2 {
+        margin-top: .5rem;
+        margin-bottom: .2rem;
+    }
+    
+    h3 {
+        margin-top: .5rem;
+        margin-bottom: .2rem;
+    }
+
+    img {
+        width: 45%;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    header nav {
+        flex-direction: row;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    header ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    header ul li {
+        margin-top: auto;
+    }
+
+    li a {
+        border-width: .3rem;
+        font-size: 1.5rem;
+        padding: .2rem;
+    }
+
+    .card {
+        align-items: center;
+    }
+
+    .card {
+        margin: .5rem 0;
+    }
+
+    .card p {
+        margin: .5rem 0;
+    }
+}
+
+/* Big screen style */
+@media only screen and (min-width: 1400px) {
+    *{
+        font-size: 26px;
+    }
+
+    h1 {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+    
+    h2 {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+    
+    h3 {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    header nav {
+        flex-direction: row;
+        width: 100%;
+        margin: 1rem;
+    }
+
+    header ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    header ul li {
+        margin-top: auto;
+    }
+
+    li a {
+        font-size: 2rem;
+        padding: .5rem;
+    }
+
+    .block {
+        padding: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .cardBox {
+        flex-direction: row;
+    }
+
+    .card {
+        margin: 0 1rem;
+    }
+
+    .card p {
+        margin-bottom: 1rem;
+    }
+
+    .unit {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .unit img {
+        flex: 1;
+        width: 25%;
+        object-fit: cover;
+        margin: 0;
+    }
+    
+    .unit p {
+        flex: 3;
+        margin-left: .5rem;
+    }
+        
+    .unit:nth-child(2n+1) {
+        flex-direction: row-reverse;
+    }
+
+    .unit:nth-child(2n+1) p {
+        margin-left: 0;
+        margin-right: .5rem;
+    }
+
+    input {
+        width: 45%;
+    }
+    
+    .cta {
+        font-size: 1.5rem;
+    }
+
+    footer span {
+        font-size: .6rem;
+    }
 }
