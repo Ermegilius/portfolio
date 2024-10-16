@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ermegilius">
+    <meta name="description" content="This portfoio has been done as a study assignment">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="./responsive_style.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/icon_favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!--Start of the header section-->
+    <header>  
+        <div id="banner" title="Vladimir's portfolio banner">
+            <h1>Welcome to my Portfolio</h1>
+        </div>
+        <nav>
+            <span class="material-symbols-rounded" id="mobileMenuButton">menu</span>
+            <ul>   
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#aboutMe">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>  
+        </nav>
+    </header>
+     <!--End of the header section-->
+
+     <!--Start of the main section-->
+    <main>
+        <div id="gallery" class="gridBlock">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+            <img src="./imgs/1.jpeg" alt="a placeholder image">
+        </div>
+
+        <div id="contactMe" class="block">
+            
+            <h2>Contact Me</h2>
+            <div class="formBox">
+                <form>
+                    <label for="yourtName">Your name</label>
+                    <input type="text" name="yourName" placeholder="type your name">
+
+                    <label for="email">Your email</label>
+                    <input type="email" name="email" placeholder="type your email">
+
+                    <label for="message">Your message<label>
+                    <textarea id="message" name="message" cols="40" rows="5" placeholder="type your message"></textarea>
+                </form>
+                <button type="submit" class="cta">Send message</button>
+            </div>
+        </div>
+    </main>
+    <!--End of the main section-->
+    <button id="backToTop">Back to top</button>
+
+    <!--Start of the footer section-->
+    <footer title="Footer with a picture of mountain view">
+        <p>&copy <span id="year"></span> by Ermegilius <br> (aka Vladimir Beliakov)</p>
+    </footer>
+    <script src="index.js"></script>
+    <!--End of the footer section-->
+</body>
+
+</html>

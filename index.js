@@ -13,12 +13,10 @@ function back() {
 //header background color on scroll function
 function scrolled() {
     const header = document.querySelector("header");
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
         header.style.filter = 'grayscale(1)';
-        console.log('scrolled');
     } else {
         header.style.filter = 'grayscale(0)';
-        console.log('unscrolled');
     }
 }
 
@@ -31,7 +29,6 @@ function debounce(func, delay) {
         inDebounce = setTimeout(() => func.apply(context, args), delay);
     }
 }
-
 
 //shifts anchor positions in the document with current heigth of the header (used chatGPT to write this function)
 document.querySelectorAll('nav a').forEach(anchor => {
