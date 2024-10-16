@@ -76,6 +76,8 @@ header {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    filter: grayscale(0);
+    transition: filter 3s ease;
 }
 
 header::before {
