@@ -51,5 +51,17 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
+
+//mobile menu (hides/unhides nav buttons)
+const mobileMenuButton = document.querySelector('#mobileMenuButton');
+const navButtons = document.querySelectorAll('li');
+function mobileMenuTooggler() {
+    navButtons.forEach(button => {
+        button.classList.toggle('hidden');
+    });
+}
+
+
+mobileMenuButton.addEventListener('click', mobileMenuTooggler);
 document.querySelector('#backToTop').addEventListener('click', back);
 window.addEventListener('scroll', debounce(scrolled, 500));
