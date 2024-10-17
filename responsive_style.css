@@ -45,6 +45,10 @@ h3 {
     text-align: center;
 }
 
+button:hover {
+   cursor: pointer; 
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -336,6 +340,11 @@ input::placeholder, textarea::placeholder {
     opacity: .5;
 }
 
+#backToTop:hover {
+    opacity: 1;
+    outline: var(--outline--light);
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -562,6 +571,7 @@ footer span {
 
     .card {
         margin: 0 1rem;
+        align-self: stretch;
     }
 
     .card p {
