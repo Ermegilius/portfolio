@@ -30,7 +30,7 @@ function debounce(func, delay) {
     }
 }
 
-//shifts anchor positions in the document with current heigth of the header (used chatGPT to write this function)
+//LOCAL links: shifts anchor positions in the document with current heigth of the header (used chatGPT to write this function)
 document.querySelectorAll('.localLink').forEach(anchor => {
     anchor.addEventListener('click', function (event) {
         event.preventDefault();
@@ -48,6 +48,21 @@ document.querySelectorAll('.localLink').forEach(anchor => {
     });
 });
 
+//shifts the viewport to the correct position after external link (used chatGPT to write this function)
+window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'auto',
+            });
+        }
+    }
+});
 
 //mobile menu (hides/unhides nav buttons)
 const mobileMenuButton = document.querySelector('#mobileMenuButton');
