@@ -198,8 +198,12 @@ box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card a:hover {
-    color: var(--accent-light-color);
+    color: #930000;
 }
+
+.card a:visited {
+    color: #d78e8e;
+  }
 
 .unit {
     display: flex;
