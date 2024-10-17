@@ -85,4 +85,5 @@ function handleResize() {
 mobileMenuButton.addEventListener('click', mobileMenuTooggler);
 document.querySelector('#backToTop').addEventListener('click', back);
 window.addEventListener('scroll', debounce(scrolled, 500));
-window.addEventListener('resize', debounce(handleResize, 50));
+window.addEventListener('resize', debounce(handleResize, 30));
+window.addEventListener('load', handleResize);
