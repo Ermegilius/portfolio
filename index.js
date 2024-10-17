@@ -31,7 +31,7 @@ function debounce(func, delay) {
 }
 
 //shifts anchor positions in the document with current heigth of the header (used chatGPT to write this function)
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('.localLink').forEach(anchor => {
     anchor.addEventListener('click', function (event) {
         event.preventDefault();
 
