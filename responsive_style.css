@@ -326,7 +326,7 @@ input::placeholder, textarea::placeholder {
 
 #backToTop {
     position: fixed;
-    bottom: 5%;
+    bottom: 6%;
     right: 1rem;
     z-index: 1;
     padding: .5rem;
@@ -335,7 +335,7 @@ input::placeholder, textarea::placeholder {
     color: var(--primary--dark-color);
     border: none;
     text-transform: uppercase;
-    width: 20vw;
+    width: 7rem;
     font-size: 1rem;
     opacity: .5;
 }
@@ -502,7 +502,7 @@ footer span {
     }
 
     #backToTop {
-        bottom: 1%;
+        bottom: 8%;
     }
 }
 
@@ -633,12 +633,12 @@ footer span {
         font-size: 1.5rem;
     }
 
-    #backToTop {
-        width: 10vw;
-    }
-
     footer span {
         font-size: .6rem;
         bottom: 5%;
+    }
+
+    #backToTop {
+        bottom: 1%;
     }
 }
