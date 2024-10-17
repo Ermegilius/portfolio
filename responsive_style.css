@@ -80,6 +80,7 @@ header {
     top: 0;
     filter: grayscale(0);
     transition: filter 3s ease;
+    z-index: 1;
 }
 
 header::before {
@@ -96,7 +97,7 @@ header::before {
 header nav {
     display: flex;
     flex-direction: row;
-    width: 75%;
+
     margin: 1rem;
 }
 
@@ -108,10 +109,10 @@ header ul {
     list-style: none;
     flex-wrap: nowrap;
     justify-content: space-around;
-    
 }
 
 #mobileMenuButton{
+    display: flex;
     margin-top: auto;
     margin-right: 2rem;
     margin-left: 1rem;
@@ -127,6 +128,7 @@ header ul {
 
 header nav ul li {
     align-self: center;
+    margin: 0.3rem;
 }
 
 li a {
@@ -140,7 +142,6 @@ li a {
     padding: .1rem;
     opacity: .9;
 }
-
 
 li a:hover {
     background-color: var(--secondery-light-color);
@@ -451,10 +452,9 @@ footer span {
 
     .card {
         align-items: center;
-    }
-
-    .card {
         margin: .5rem 0;
+        width: 75%;
+        align-self: center;
     }
 
     .card p {
@@ -526,7 +526,7 @@ footer span {
 
     li a {
         font-size: 2rem;
-        padding: .5rem;
+        padding: .2rem;
     }
 
     .block {

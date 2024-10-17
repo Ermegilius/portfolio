@@ -58,7 +58,16 @@ function mobileMenuTooggler() {
     });
 }
 
+//makes nav bar visible if user has hidden it in mobile/tablet view and then resized the window
+function handleResize() {
+    if (window.innerWidth >= 1400) {
+        navButtons.forEach(button => {
+            button.classList.remove('hidden');
+        });
+    }
+}
 
 mobileMenuButton.addEventListener('click', mobileMenuTooggler);
 document.querySelector('#backToTop').addEventListener('click', back);
 window.addEventListener('scroll', debounce(scrolled, 500));
+window.addEventListener('resize', debounce(handleResize, 50));
