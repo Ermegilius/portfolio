@@ -20,6 +20,19 @@ function scrolled() {
     }
 }
 
+//header shrinking on scroll function
+function headerSrinker() {
+    const header = document.querySelector("header");
+    const h1 = document.querySelector("h1");
+    if (window.scrollY > 10) {
+        h1.classList.add("hidden");
+    } else {
+        h1.classList.remove("hidden");
+    }
+};
+
+
+//debouncer function
 function debounce(func, delay) {
     let inDebounce;
     return function () {
@@ -75,7 +88,7 @@ function mobileMenuTooggler() {
 
 //makes nav bar visible if user has hidden it in mobile/tablet view and then resized the window
 function handleResize() {
-    if (window.innerWidth >= 1400) {
+    if (window.innerWidth >= 992) {
         navButtons.forEach(button => {
             button.classList.remove('hidden');
         });
@@ -87,3 +100,4 @@ document.querySelector('#backToTop').addEventListener('click', back);
 window.addEventListener('scroll', debounce(scrolled, 500));
 window.addEventListener('resize', debounce(handleResize, 30));
 window.addEventListener('load', handleResize);
+window.addEventListener("scroll", debounce(headerSrinker, 300));
